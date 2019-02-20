@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4711738193085764690}
   - component: {fileID: 5169368754461991080}
   - component: {fileID: 4083423486386637125}
+  - component: {fileID: 1439199200029459739}
   m_Layer: 0
   m_Name: moving-platform
   m_TagString: Untagged
@@ -111,3 +112,16 @@ PolygonCollider2D:
       - {x: 0.17999999, y: -0.08}
       - {x: 0.22999999, y: 0.02}
       - {x: 0.22999999, y: 0.08}
+--- !u!114 &1439199200029459739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463612383937229885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 706b3f4114f464220a64341ea192d1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionSpeed: 8

@@ -628,6 +628,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\PlayerAnimator.cs" />
     <Compile Include="Assets\PlayerController.cs" />
   </ItemGroup>
   <ItemGroup>

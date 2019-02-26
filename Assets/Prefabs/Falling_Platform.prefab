@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 3533485193204734283}
   - component: {fileID: 3819945381547198011}
   - component: {fileID: 7555779256560909757}
-  - component: {fileID: 2098571980921993023}
+  - component: {fileID: 8043321374742274513}
+  - component: {fileID: 5108299590762729987}
   m_Layer: 0
-  m_Name: Ice_Platform
-  m_TagString: Untagged
+  m_Name: Falling_Platform
+  m_TagString: Falling
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,7 +108,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.17, y: 1.04}
   m_EdgeRadius: 0
---- !u!114 &2098571980921993023
+--- !u!114 &8043321374742274513
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,6 +117,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 2227423303727073599}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd85cd99c1a18466eb09e05fb1af91af, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f54c0104b10e42eb87ca358db073b25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fall_delay: 2
+--- !u!50 &5108299590762729987
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2227423303727073599}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 5

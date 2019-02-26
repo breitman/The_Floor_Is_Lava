@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Basic_Platform.cs" />
     <Compile Include="Assets\Scripts\Bouncy_Platform.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Falling_Platform.cs" />
     <Compile Include="Assets\Scripts\Ice_Platform.cs" />
     <Compile Include="Assets\Scripts\Moving_Platform.cs" />
     <Compile Include="Assets\Scripts\PlatformController.cs" />

@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 
     public float speed = 5;
     public float jumpForce = 10;
-
+    private bool isFalling = false; 
     protected Rigidbody2D rb2D;
     protected SpriteRenderer sr;
     private float boxColliderSizeX;
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
                     gameObject.GetComponent<BoxCollider2D>().size -= new Vector2(0, (.63f * boxColliderSizeY));
                 }
             }*/
-            if (Input.GetKeyDown(KeyCode.Space) && vel.y == 0f)
+            if (Input.GetKeyDown(KeyCode.Space) && (vel.y == 0f || isFalling == true))
             {
                 vel.y = jumpForce;
             }
@@ -72,7 +72,20 @@ public class PlayerController : MonoBehaviour
         {
             destroyPlayer();
         }
+        if (collision.gameObject.CompareTag("Falling"))
+        {
+            isFalling = true;
+        }
     }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Falling"))
+        {
+            isFalling = false;
+        }
+    }
+
 
 
     public void destroyPlayer()

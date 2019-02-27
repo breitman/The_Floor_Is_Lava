@@ -18,15 +18,6 @@ public class Bouncy_Platform : Basic_Platform
     {
 
         spriteRenderer.sprite = down_sprite;
-        //float time = 3f;
-        //float y = player.transform.position.y;
-        //Vector3 position = player.transform.position;
-        //while (time > 0f)
-        //{
-        //    y += 1;
-        //    player.transform.position = new Vector3(position.x, y, position.z);
-        //    time = time - Time.deltaTime;
-        //}
     }
 
     private IEnumerator OnCollisionExit2D(Collision2D other)

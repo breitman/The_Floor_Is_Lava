@@ -14,16 +14,13 @@ public class PlayerController : MonoBehaviour
     private float boxColliderSizeX;
     private float boxColliderSizeY;
     private Vector2 startingCollider;
-    //public Sprite crouchSprite;
+
     public Sprite defaultSprite;
 
     private void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        //boxColliderSizeX = gameObject.GetComponent<BoxCollider2D>().size.x;
-        //boxColliderSizeY = gameObject.GetComponent<BoxCollider2D>().size.y;
-        //startingCollider = new Vector2(boxColliderSizeX, boxColliderSizeY);
     }
 
     private void Update()
@@ -32,20 +29,7 @@ public class PlayerController : MonoBehaviour
         {
             float movementHorizontal = 0;
             Vector2 vel = rb2D.velocity;
-            //if (gameObject.GetComponent<BoxCollider2D>().size != startingCollider && !Input.GetKey(KeyCode.DownArrow))
-            //{
-            //    gameObject.GetComponent<BoxCollider2D>().size = startingCollider;
-            //    sr.sprite = defaultSprite;
-            //}
 
-            /*if (Input.GetKey(KeyCode.DownArrow))
-            {
-                sr.sprite = crouchSprite;
-                if (gameObject.GetComponent<BoxCollider2D>().size.y >= boxColliderSizeY)
-                {
-                    gameObject.GetComponent<BoxCollider2D>().size -= new Vector2(0, (.63f * boxColliderSizeY));
-                }
-            }*/
             if (Input.GetKeyDown(KeyCode.Space) && (vel.y == 0f || isFalling == true))
             {
                 vel.y = jumpForce;
@@ -72,7 +56,7 @@ public class PlayerController : MonoBehaviour
         {
             destroyPlayer();
         }
-        if (collision.gameObject.CompareTag("Falling"))
+        if (collision.gameObject.CompareTag("Falling") || collision.gameObject.CompareTag("Moving"))
         {
             isFalling = true;
         }
@@ -80,7 +64,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Falling"))
+        if (collision.gameObject.CompareTag("Falling") || collision.gameObject.CompareTag("Moving"))
         {
             isFalling = false;
         }

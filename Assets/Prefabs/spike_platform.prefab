@@ -69,7 +69,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 656f0c13e960a1a4bbfe2deeabaee016, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -119,9 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcad9139be5954b9db1733fcb567fb34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprites:
-  - {fileID: 0}
-  - {fileID: 21300000, guid: 656f0c13e960a1a4bbfe2deeabaee016, type: 3}
+  sprite: {fileID: 21300000, guid: 656f0c13e960a1a4bbfe2deeabaee016, type: 3}
 --- !u!1001 &8729572970862998063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -132,22 +130,22 @@ PrefabInstance:
     - target: {fileID: 4079414604789930469, guid: 48c2d6d684f0fc54ebd02ab2db076364,
         type: 3}
       propertyPath: m_Name
-      value: spike_platform1
+      value: spike_platform
       objectReference: {fileID: 0}
     - target: {fileID: 7302303673345063442, guid: 48c2d6d684f0fc54ebd02ab2db076364,
         type: 3}
       propertyPath: directionSpeed
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 461302923964762411, guid: 48c2d6d684f0fc54ebd02ab2db076364,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.12
+      value: 4.73
       objectReference: {fileID: 0}
     - target: {fileID: 461302923964762411, guid: 48c2d6d684f0fc54ebd02ab2db076364,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.24
+      value: 0.91
       objectReference: {fileID: 0}
     - target: {fileID: 461302923964762411, guid: 48c2d6d684f0fc54ebd02ab2db076364,
         type: 3}

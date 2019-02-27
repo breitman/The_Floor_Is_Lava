@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 7555779256560909757}
   - component: {fileID: 8043321374742274513}
   - component: {fileID: 5108299590762729987}
+  - component: {fileID: 5277343225567849758}
   m_Layer: 0
-  m_Name: Falling_Platform
+  m_Name: falling_platform
   m_TagString: Falling
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2227423303727073599}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: -0.07, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.694, y: -0.07, z: 0}
+  m_LocalScale: {x: 0.696, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -120,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f54c0104b10e42eb87ca358db073b25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fall_delay: 2
+  fall_delay: 0.4
 --- !u!50 &5108299590762729987
 Rigidbody2D:
   serializedVersion: 4
@@ -142,3 +143,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
+--- !u!114 &5277343225567849758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2227423303727073599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 706b3f4114f464220a64341ea192d1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionSpeed: 4

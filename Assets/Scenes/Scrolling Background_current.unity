@@ -216,6 +216,9 @@ MonoBehaviour:
   objects:
   - {fileID: 4079414604789930469, guid: 48c2d6d684f0fc54ebd02ab2db076364, type: 3}
   - {fileID: 2525490465904277035, guid: 7b3fab866fd29094dbefc007bdfa0ec1, type: 3}
+  - {fileID: 2227423303727073599, guid: 6e2f661e930624e82b1f4be10137df4a, type: 3}
+  - {fileID: 4277040081697068175, guid: 8f6852beb09f1446b83d84f95db47e37, type: 3}
+  - {fileID: 4735906254602939338, guid: eebfd86e8059b4546a0c04d89e6d5a6a, type: 3}
   - {fileID: 463612383937229885, guid: d01249ce9f41c91438bef12a0c8416ee, type: 3}
   player: {fileID: 1595600639}
   spawnMin: 0.5
@@ -575,7 +578,7 @@ GameObject:
   - component: {fileID: 1595600640}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

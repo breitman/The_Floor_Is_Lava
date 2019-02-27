@@ -7,10 +7,8 @@ public class Spike_Platform : Basic_Platform
 
     public Sprite sprite;
     private SpriteRenderer spriteRenderer;
-    private bool active = false;
     private BoxCollider2D boxCollider;
     private int currFrame;
-    private int i = 0;
 
 
     public void Start()

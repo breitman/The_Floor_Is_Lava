@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ice_Platform : MonoBehaviour
+public class Ice_Platform : Basic_Platform
 {
-    // Start is called before the first frame update
+    float MovementSpeed = 2;
+    float MaxSpeed = 4;
+    float AccelerationSpeed = 0.3f;
+    float DeaccelerationSpeed = 0.3f;
+    float IceSpeedMultiplier = 1.2f;
+
     void Start()
     {
         
@@ -14,5 +19,9 @@ public class Ice_Platform : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public override void DoAction(GameObject player)
+    {
     }
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Lava
   - Falling
+  - Moving
   layers:
   - Default
   - TransparentFX

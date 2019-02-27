@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Menu Screen.unity
-    guid: 2304e4b6457332948aff117fbe751c10
+    guid: 84dfdc8a7afab454d8210598f2239535
   - enabled: 1
     path: Assets/Scenes/Scrolling Background_current.unity
     guid: 7012f8a6c7ed84774bd74439cd3c9563

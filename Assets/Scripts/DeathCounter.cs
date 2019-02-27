@@ -25,10 +25,7 @@ public class DeathCounter : MonoBehaviour
 
     private void Update()
     {
-        if (player.transform.position.x > 0)
-        {
-            score += player.transform.position.x;
-        }
+        score += Time.deltaTime;
         if (frameCount % 15 == 0)
         {
             

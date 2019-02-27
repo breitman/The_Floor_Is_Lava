@@ -14,15 +14,8 @@ public class PlayerController : MonoBehaviour
     protected Rigidbody2D rb2D;
     protected SpriteRenderer sr;
 
-    private float boxColliderSizeX;
-    private float boxColliderSizeY;
-    private Vector2 startingCollider;
-
-    public Sprite defaultSprite;
-
 
     private DeathCounter dc;
-    private bool destroying;
 
 
     private void Start()
@@ -31,7 +24,6 @@ public class PlayerController : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
 
         dc = GameObject.FindObjectOfType<DeathCounter>();
-        destroying = false;
 
     }
 
@@ -64,9 +56,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Lava") && !destroying)
+        if (collision.gameObject.CompareTag("Lava"))
         {
-            destroying = true;
             destroyPlayer();
         }
         if (collision.gameObject.CompareTag("Falling") || collision.gameObject.CompareTag("Moving"))
@@ -83,6 +74,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Lava"))
+        {
+            destroyPlayer();
+        }
+    }
+
 
     public void destroyPlayer()
     {
@@ -96,7 +95,6 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(seconds);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         dc.IncreaseDeaths();
-        destroying = false;
 
     }
 }

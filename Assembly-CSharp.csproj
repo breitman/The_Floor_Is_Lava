@@ -65,6 +65,8 @@
     <Compile Include="Assets\Scripts\Bouncy_Platform.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\DeathCounter.cs" />
+    <Compile Include="Assets\Scripts\Default_Platform.cs" />
+    <Compile Include="Assets\Scripts\Destroyer.cs" />
     <Compile Include="Assets\Scripts\Falling_Platform.cs" />
     <Compile Include="Assets\Scripts\Ice_Platform.cs" />
     <Compile Include="Assets\Scripts\Moving_Platform.cs" />
@@ -74,6 +76,7 @@
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\SpawnScript.cs" />
     <Compile Include="Assets\Scripts\Spike_Platform.cs" />
+    <Compile Include="Assets\Scripts\StartPlatform.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />

@@ -38,19 +38,62 @@ public class SpawnScript : MonoBehaviour
         //float yOffset = Random.Range(-8, 8);
 
         //float xPos = 8;
-        float yPos = Random.Range(Random.Range(-5f,-3f), lastSpawnPos.y+ 3f);
-        while(yPos+lastSpawnPos.y > 5)
+        float yPos = Random.Range(Random.Range(-5f, -3f), lastSpawnPos.y + 3f);
+        while (yPos + lastSpawnPos.y > 5)
         {
-            yPos = Random.Range(Random.Range(-5f,-3f), lastSpawnPos.y + 3f);
+            yPos = Random.Range(Random.Range(-5f, -3f), lastSpawnPos.y + 3f);
         }
 
 
         Vector3 spawnPos = new Vector3(transform.position.x, yPos, playerPos.z);
         lastSpawnPos = spawnPos;
 
-        Instantiate(objects[Random.Range(0, objects.GetLength(0))], spawnPos, Quaternion.identity);
+        Instantiate(objects[biasedRandomGenerator()], spawnPos, Quaternion.identity);
         Invoke("Spawn", Random.Range(spawnMin, spawnMax));
 
 
+    }
+    int biasedRandomGenerator()
+    {
+        /*
+         0 = basic
+         1 = square
+         2 = falling
+         3 = bounce 
+         4 = spike
+         5 = move
+         */
+
+        int RandomNum = Random.Range(1, 18);
+
+        switch (RandomNum)
+        {
+            case 15:
+            case 9:
+            case 5:
+            case 18:
+            case 3:
+            case 11:
+            case 17:
+            case 1:
+                return 0; //basic
+            case 7:
+                return 4;//spike
+            case 6:
+            case 4:
+                return 2;//falling
+            case 16:
+            case 14:
+                return 3;//
+            case 10:
+            case 13:
+                return 5;//moving
+            case 2:
+            case 8:
+            case 12:
+                return 1;//bouncy
+            default:
+                return 0;
+        }
     }
 }

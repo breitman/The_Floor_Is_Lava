@@ -29,7 +29,7 @@ public abstract class Basic_Platform : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.collider.transform.SetParent(transform);
+            collision.collider.transform.SetParent(null);
         }
     }
 

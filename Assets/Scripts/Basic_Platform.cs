@@ -38,7 +38,8 @@ public abstract class Basic_Platform : MonoBehaviour
 
     public void GameOver()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Game Over");
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }

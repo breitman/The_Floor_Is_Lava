@@ -24,6 +24,7 @@ public class Bouncy_Platform : Basic_Platform
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            other.collider.transform.SetParent(null);
             yield return new WaitForSeconds(0.25f);
             spriteRenderer.sprite = up_sprite;
         }

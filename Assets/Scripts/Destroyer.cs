@@ -10,7 +10,7 @@ public class Destroyer : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            SceneManager.LoadScene("Game Over");
+            SceneManager.LoadScene("Game_Over");
         }
     }
     // Start is called before the first frame update

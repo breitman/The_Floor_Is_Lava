@@ -6,12 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class DeathCounter : MonoBehaviour
 {
-    private static double deaths = 0;
     private static float score = 0.0f;
     public static GameObject player;
     private int frameCount;
 
-    public Text deathCount;
     public Text scoreCount;
 
     private static DeathCounter dcInstance;
@@ -35,10 +33,6 @@ public class DeathCounter : MonoBehaviour
             frameCount = 0;
 
         }
-        else
-        {
-            //GameObject.Find("DontDestroyOnLoad").active = false;
-        }
     }
 
     private void Update()
@@ -47,7 +41,6 @@ public class DeathCounter : MonoBehaviour
         if(SceneManager.GetActiveScene().name == "Game_Over")
         {
             scoreCount.text = Mathf.Floor(score).ToString();
-            //GameObject.Find("GameManager").GetComponent<DeathCounter>().scoreCount.text = Mathf.Floor(score).ToString();
         }
         else
         {
@@ -58,15 +51,6 @@ public class DeathCounter : MonoBehaviour
                 scoreCount.text = "Score: " + Mathf.Floor(score).ToString();
             }
             ++frameCount;
-        }
-    }
-
-    public void IncreaseDeaths()
-    {
-        if (SceneManager.GetActiveScene().name != "Game_Over")
-        {
-            ++deaths;
-            deathCount.text = "Deaths: " + deaths.ToString();
         }
     }
 }

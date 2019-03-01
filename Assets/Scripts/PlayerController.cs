@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     public float speed = 5;
     public float jumpForce = 10;
 
+    private AudioSource jumpSound;
+
     private bool isFalling = false;
 
     protected Rigidbody2D rb2D;
@@ -22,6 +24,7 @@ public class PlayerController : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        jumpSound = GetComponent<AudioSource>();
 
     }
 
@@ -35,6 +38,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && (vel.y == 0f || isFalling == true))
             {
                 vel.y = jumpForce;
+                jumpSound.Play();
             }
 
             if (Input.GetKey(KeyCode.LeftArrow))

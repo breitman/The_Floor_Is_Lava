@@ -23,8 +23,6 @@ public class PlayerController : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
 
-        dc = GameObject.FindObjectOfType<DeathCounter>();
-
     }
 
     private void Update()
@@ -94,7 +92,6 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(seconds);
         SceneManager.LoadScene(2);
-        dc.IncreaseDeaths();
 
     }
 }

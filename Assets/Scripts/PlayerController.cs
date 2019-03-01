@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator RestartTheGameAfterSeconds(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(2);
         dc.IncreaseDeaths();
 
     }

@@ -21,5 +21,6 @@ public class StartPlatform : Basic_Platform
     {
         yield return new WaitForSeconds(fall_delay);
         GetComponent<Rigidbody2D>().isKinematic = false;
+        GetComponent<PolygonCollider2D>().enabled = false;
     }
 }
